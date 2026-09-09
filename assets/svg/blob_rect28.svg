@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="113.548" height="305.294" viewBox="0 0 113.548 305.294" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Rectangle 28" opacity="0.5" filter="url(#filter0_f_0_431)">
+<path d="M25.7089 25.7089H87.8389L70.6996 121.046C64.2723 183.176 70.6996 279.585 70.6996 279.585H25.7089V25.7089Z" fill="#213721"/>
+<path d="M87.1982 26.2441L70.1728 120.951L70.1689 120.972L70.1669 120.991C66.9496 152.092 66.9503 191.755 67.7539 223.628C68.1557 239.567 68.7584 253.565 69.2607 263.577C69.5118 268.583 69.738 272.594 69.9013 275.352C69.983 276.732 70.0491 277.799 70.0947 278.52C70.1075 278.724 70.1184 278.901 70.1279 279.049H26.2441V26.2441H87.1982Z" stroke="#C8D8C0" stroke-width="1.07121"/>
+</g>
+<defs>
+<filter id="filter0_f_0_431" x="0" y="0" width="113.548" height="305.294" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="12.8545" result="effect1_foregroundBlur_0_431"/>
+</filter>
+</defs>
+</svg>
