@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"D:/Beauty Web\" && git add -A && if ! git diff --cached --quiet; then git -c commit.gpgsign=false commit -m \"chore: auto update ($(date '+%Y-%m-%d %H:%M:%S'))\" -m \"Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>\" && git push origin main; fi",
+            "timeout": 120,
+            "statusMessage": "Auto-committing & pushing to GitHub…"
+          }
+        ]
+      }
+    ]
+  }
+}
