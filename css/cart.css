@@ -1,0 +1,67 @@
+/* ============================================================
+   VELVETY — Cart page (after styles.css + shop.css + detail.css)
+   ============================================================ */
+.cartpage{width:100%;padding:calc(84px + 40px) var(--gutter) 96px;display:flex;flex-direction:column}
+.cartpage__grid{display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:start}
+
+/* ---- title ---- */
+.cartpage__title{font-family:var(--serif);font-weight:300;font-size:56px;line-height:1.1;color:var(--g100);margin-bottom:32px}
+
+/* ---- item list ---- */
+.cartlist{display:flex;flex-direction:column}
+.cartrow{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--border)}
+.cartrow:first-child{border-top:1px solid var(--border)}
+.cartrow__img{width:120px;height:120px;background:var(--surface);overflow:hidden;position:relative}
+.cartrow__img img{position:absolute;inset:8% 0;height:84%;width:100%;object-fit:cover;object-position:center}
+.cartrow__main{display:flex;flex-direction:column;gap:16px}
+.cartrow__top{display:flex;justify-content:space-between;gap:16px}
+.cartrow__name h3{font-family:var(--sans);font-weight:300;font-size:22px;color:var(--g100)}
+.cartrow__name p{margin:6px 0 0;font-size:16px;color:var(--g40)}
+.cartrow__price{text-align:right;white-space:nowrap}
+.cartrow__price .old{display:block;font-size:16px;color:var(--g40);text-decoration:line-through}
+.cartrow__price .now{font-size:22px;font-weight:700;color:var(--g100)}
+.cartrow__bottom{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cartrow__acts{display:flex;gap:16px}
+.cartrow__acts button{width:24px;height:24px;color:var(--g40);transition:color .25s,transform .2s}
+.cartrow__acts button:hover{color:var(--g100);transform:translateY(-2px)}
+.cartrow__acts svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.6}
+.cartrow__step{display:flex;align-items:center;gap:16px;background:var(--surface);height:44px;padding:0 16px;border-radius:44px}
+.cartrow__step button{width:22px;height:22px;display:flex;align-items:center;justify-content:center;color:var(--g100);font-size:18px}
+.cartrow__step button:hover{color:var(--g40)}
+.cartrow__step .q{min-width:18px;text-align:center;font-size:16px}
+
+/* ---- empty ---- */
+.cartempty{padding:60px 0;display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.cartempty p{font-family:var(--serif);font-size:28px;color:var(--g100)}
+.cartempty a{height:52px;padding:0 40px;background:var(--g100);color:var(--c0);display:inline-flex;align-items:center;justify-content:center;font-size:16px;transition:background .35s var(--ease),transform .35s var(--ease)}
+.cartempty a:hover{background:var(--pressed);transform:translateY(-2px)}
+
+/* ---- order summary ---- */
+.ordersum{background:var(--surface);padding:40px;display:flex;flex-direction:column;gap:24px}
+.ordersum h2{font-family:var(--serif);font-weight:300;font-size:32px;color:var(--g100)}
+.ordersum__group{display:flex;flex-direction:column;gap:16px}
+.ordersum__row{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:16px;color:var(--g100)}
+.ordersum__row .lbl{color:var(--g80)}
+.ordersum__row b{font-weight:700}
+.ordersum__div{height:1px;background:var(--border)}
+.ordersum__total{font-size:20px}
+.ordersum__total .lbl{color:var(--g100);font-weight:700}
+.ordersum__total b{font-size:24px}
+.ordersum__checkout{height:56px;background:var(--g100);color:var(--c0);display:flex;align-items:center;justify-content:center;font-size:16px;transition:background .35s var(--ease),transform .35s var(--ease)}
+.ordersum__checkout:hover{background:var(--pressed);transform:translateY(-2px)}
+.ordersum__paypal{height:56px;background:var(--white);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:2px;font-family:var(--sans);font-weight:700;font-size:20px;letter-spacing:-.5px;transition:background .3s var(--ease)}
+.ordersum__paypal:hover{background:#f7faf5}
+.ordersum__paypal .pal{color:#003087}.ordersum__paypal .pay{color:#009cde}
+.ordersum__fine{margin:0;font-size:13px;line-height:1.5;color:var(--g60)}
+.ordersum__fine b{color:var(--g100);font-weight:600}
+
+@media(max-width:900px){
+  .cartpage__grid{grid-template-columns:1fr;gap:40px}
+  .cartpage__title{font-size:clamp(36px,8vw,56px)}
+}
+@media(max-width:560px){
+  .cartrow{grid-template-columns:88px 1fr;gap:16px}
+  .cartrow__img{width:88px;height:88px}
+  .cartrow__top{flex-direction:column;gap:4px}
+  .ordersum{padding:28px}
+}

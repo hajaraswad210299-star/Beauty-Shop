@@ -137,7 +137,7 @@
       "</div>" +
       '<div class="cart-foot"><div class="cart-subtotal"><span>Subtotal</span><b>' + money(subtotal) + "</b></div>" +
       '<button class="cart-checkout">Checkout now</button>' +
-      '<a href="shop.html" class="cart-viewcart">View cart</a></div>';
+      '<a href="cart.html" class="cart-viewcart">View cart</a></div>';
 
     $$(".cart-item", body).forEach((row) => {
       const i = +row.dataset.i;
