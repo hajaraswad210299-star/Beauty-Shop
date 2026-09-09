@@ -52,8 +52,15 @@
   if (filterDD) {
     const clear = filterDD.querySelector(".fm-clear");
     const apply = filterDD.querySelector(".fm-apply");
-    if (clear) clear.addEventListener("click", () => $$("input", filterDD).forEach((i) => (i.checked = false)));
+    const badge = filterDD.querySelector(".fm-badge");
+    const updateBadge = () => {
+      const n = $$("input:checked", filterDD).length;
+      if (badge) { badge.textContent = n; badge.hidden = n === 0; }
+    };
+    $$("input", filterDD).forEach((i) => i.addEventListener("change", updateBadge));
+    if (clear) clear.addEventListener("click", () => { $$("input", filterDD).forEach((i) => (i.checked = false)); updateBadge(); });
     if (apply) apply.addEventListener("click", () => filterDD.classList.remove("open"));
+    updateBadge();
   }
   document.addEventListener("click", () => dds.forEach((d) => { d.classList.remove("open"); const b = d.querySelector(".filter-btn"); if (b) b.setAttribute("aria-expanded", "false"); }));
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") dds.forEach((d) => d.classList.remove("open")); });

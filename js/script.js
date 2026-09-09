@@ -191,4 +191,18 @@
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); }
     });
   });
+
+  /* ---------- Blog cards → blog detail page ---------- */
+  $$(".bcard, .post-card").forEach((card) => {
+    if (card.dataset.linked) return;
+    card.dataset.linked = "1";
+    card.classList.add("is-linked");
+    card.setAttribute("role", "link");
+    card.setAttribute("tabindex", "0");
+    const go = () => { window.location.href = "blog-detail.html"; };
+    card.addEventListener("click", (e) => { if (e.target.closest("a")) return; go(); });
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); }
+    });
+  });
 })();
