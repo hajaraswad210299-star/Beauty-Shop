@@ -21,6 +21,43 @@
     tabs.addEventListener("pointermove", (e) => { if (down) tabs.scrollLeft = sl - (e.pageX - sx); });
   }
 
+  /* ---------- Filter / Sort dropdowns ---------- */
+  const dds = $$(".filter-dd");
+  dds.forEach((dd) => {
+    const btn = dd.querySelector(".filter-btn");
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const willOpen = !dd.classList.contains("open");
+      dds.forEach((d) => { d.classList.remove("open"); const b = d.querySelector(".filter-btn"); if (b) b.setAttribute("aria-expanded", "false"); });
+      dd.classList.toggle("open", willOpen);
+      btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    });
+    dd.querySelector(".filter-menu").addEventListener("click", (e) => e.stopPropagation());
+  });
+  // sort option select -> update label + active
+  const sortDD = $('.filter-dd[data-dd="sort"]');
+  if (sortDD) {
+    const label = sortDD.querySelector(".sort-label");
+    $$(".fm-opt", sortDD).forEach((opt) =>
+      opt.addEventListener("click", () => {
+        $$(".fm-opt", sortDD).forEach((o) => o.classList.remove("is-active"));
+        opt.classList.add("is-active");
+        if (label) label.textContent = opt.textContent;
+        sortDD.classList.remove("open");
+      })
+    );
+  }
+  // filter clear/apply
+  const filterDD = $('.filter-dd[data-dd="filter"]');
+  if (filterDD) {
+    const clear = filterDD.querySelector(".fm-clear");
+    const apply = filterDD.querySelector(".fm-apply");
+    if (clear) clear.addEventListener("click", () => $$("input", filterDD).forEach((i) => (i.checked = false)));
+    if (apply) apply.addEventListener("click", () => filterDD.classList.remove("open"));
+  }
+  document.addEventListener("click", () => dds.forEach((d) => { d.classList.remove("open"); const b = d.querySelector(".filter-btn"); if (b) b.setAttribute("aria-expanded", "false"); }));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") dds.forEach((d) => d.classList.remove("open")); });
+
   /* ---------- Pagination active ---------- */
   $$(".page-num").forEach((n) =>
     n.addEventListener("click", () => {

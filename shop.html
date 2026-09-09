@@ -69,13 +69,47 @@
       <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
     </button>
     <div class="filter-actions">
-      <button class="filter-btn">
-        <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/><circle cx="9" cy="7" r="2" fill="var(--c0)"/><circle cx="15" cy="12" r="2" fill="var(--c0)"/><circle cx="8" cy="17" r="2" fill="var(--c0)"/></svg>
-        Filter
-      </button>
-      <button class="filter-btn">Sort by
-        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
+      <div class="filter-dd" data-dd="filter">
+        <button class="filter-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/><circle cx="9" cy="7" r="2" fill="var(--c0)"/><circle cx="15" cy="12" r="2" fill="var(--c0)"/><circle cx="8" cy="17" r="2" fill="var(--c0)"/></svg>
+          Filter
+        </button>
+        <div class="filter-menu filter-menu--wide" role="menu">
+          <div class="fm-group">
+            <p class="fm-title">Availability</p>
+            <label class="fm-check"><input type="checkbox">In stock</label>
+            <label class="fm-check"><input type="checkbox">On sale</label>
+          </div>
+          <div class="fm-group">
+            <p class="fm-title">Price</p>
+            <label class="fm-check"><input type="checkbox">Under $20</label>
+            <label class="fm-check"><input type="checkbox">$20 – $30</label>
+            <label class="fm-check"><input type="checkbox">Over $30</label>
+          </div>
+          <div class="fm-group">
+            <p class="fm-title">Rating</p>
+            <label class="fm-check"><input type="checkbox">4.0 &amp; up</label>
+            <label class="fm-check"><input type="checkbox">4.5 &amp; up</label>
+          </div>
+          <div class="fm-actions">
+            <button class="fm-clear" type="button">Clear</button>
+            <button class="fm-apply" type="button">Apply</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-dd" data-dd="sort">
+        <button class="filter-btn" type="button" aria-haspopup="true" aria-expanded="false"><span class="sort-label">Sort by</span>
+          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="filter-menu" role="menu">
+          <button class="fm-opt is-active" role="menuitemradio">Featured</button>
+          <button class="fm-opt" role="menuitemradio">Newest</button>
+          <button class="fm-opt" role="menuitemradio">Price: Low to High</button>
+          <button class="fm-opt" role="menuitemradio">Price: High to Low</button>
+          <button class="fm-opt" role="menuitemradio">Top Rated</button>
+        </div>
+      </div>
     </div>
   </div>
 
