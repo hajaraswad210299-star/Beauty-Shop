@@ -13,11 +13,11 @@
   if (pagesBtn && navLeft) {
     const col1 = [
       ["Home", "index.html"], ["About", "about.html"], ["Shop", "shop.html"],
-      ["Product Details", "detail.html"], ["Checkout", "#"], ["Checkout Paypal", "#"],
-      ["Blog", "#"], ["Blog Detail", "#"],
+      ["Product Details", "detail.html"], ["Cart", "cart.html"], ["Checkout", "checkout.html"],
+      ["Checkout Paypal", "checkout-paypal.html"], ["Blog", "blog.html"], ["Blog Detail", "blog-detail.html"],
     ];
     const col2 = [
-      ["Order Confirmation", "#"], ["Licenses", "#"], ["Changelog", "#"],
+      ["Order Confirmation", "confirmation.html"], ["Licenses", "#"], ["Changelog", "#"],
       ["Contact Us", "#"], ["404", "#"], ["401", "#"], ["Styleguide", "#"],
     ];
     const mkCol = (items) => {
@@ -147,7 +147,7 @@
       $(".ci-save", row).addEventListener("click", (e) => e.currentTarget.classList.toggle("is-active"));
     });
     const co = $(".cart-checkout", body);
-    if (co) co.addEventListener("click", () => { co.textContent = "Order placed ✓"; setTimeout(() => (co.textContent = "Checkout now"), 1600); });
+    if (co) co.addEventListener("click", () => { window.location.href = "checkout.html"; });
   }
 
   function openCart() { render(); overlay.classList.add("open"); drawer.classList.add("open"); document.body.style.overflow = "hidden"; }

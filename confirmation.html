@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VELVETY — Order Confirmed</title>
+<meta name="description" content="Your order has been confirmed — Velvety facial &amp; skincare." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/cart.css" />
+<link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body>
+
+<header class="nav is-solid" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html" aria-label="Velvety home">
+      <img src="assets/svg/velvety_logo_nav.svg" alt="Velvety" class="nav__logo-word" />
+      <img src="assets/svg/facial_skincare_nav.svg" alt="Facial &amp; skincare" class="nav__logo-sub" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <div class="nav__left">
+        <button class="nav__link nav__pages" type="button">PAGES<img src="assets/svg/arrow_down.svg" alt="" class="nav__caret" /></button>
+        <a class="nav__link" href="shop.html">SHOP</a>
+        <a class="nav__link" href="about.html">ABOUT</a>
+      </div>
+      <div class="nav__right">
+        <a class="nav__link" href="#">LOGIN</a>
+        <a class="nav__link" href="#">CART (0)</a>
+      </div>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="conf-hero">
+  <h1>Your Order Confirmed</h1>
+  <p>Your order has been confirmed and will be shipping within next two days.</p>
+</section>
+
+<section class="co" style="padding-top:56px">
+  <div class="co__grid">
+    <div class="co__left">
+      <div class="co-sec">
+        <div class="co-sec__head"><h2>Customer Info</h2></div>
+        <div class="co-info">
+          <div class="co-info__block"><h4>Email</h4><p>fake-name@test.com</p></div>
+          <div class="co-info__block"><h4>Shipping Address</h4><p>Fake Name<br>398 11th St<br>Floor 2<br>San Fransisco CA 94103<br>USA</p></div>
+        </div>
+      </div>
+
+      <div class="co-sec">
+        <div class="co-sec__head"><h2>Shipping Method</h2></div>
+        <div class="ship-methods">
+          <label class="ship-opt is-active" style="cursor:default"><span class="radio"></span><span class="ship-opt__txt"><b>Flat Rate</b><span>Standard flat rate for all shipments.</span></span></label>
+        </div>
+      </div>
+
+      <div class="co-sec">
+        <div class="co-sec__head"><h2>Payment Info</h2></div>
+        <div class="co-info">
+          <div class="co-info__block"><h4>Payment Info</h4><p>PayPal</p></div>
+          <div class="co-info__block"><h4>Billing Address</h4><p>Fake Name<br>398 11th St<br>Floor 2<br>San Fransisco CA 94103<br>USA</p></div>
+        </div>
+      </div>
+
+      <div class="co-sec">
+        <div class="co-sec__head"><h2>Items in Order</h2></div>
+        <div class="co-items" id="coItems"></div>
+      </div>
+    </div>
+
+    <aside class="ordersum" id="orderSummary">
+      <h2>Order Summary</h2>
+      <div class="ordersum__group" id="sumItems"></div>
+      <div class="ordersum__div"></div>
+      <div class="ordersum__row"><span class="lbl">Shipping Fees</span><b id="sumShipping">$10.00</b></div>
+      <div class="ordersum__div"></div>
+      <div class="ordersum__group">
+        <div class="ordersum__row"><span class="lbl">Total Before Tax</span><b id="sumBeforeTax">$0.00</b></div>
+        <div class="ordersum__row"><span class="lbl">Estimated Tax</span><b id="sumTax">$5.00</b></div>
+      </div>
+      <div class="ordersum__div"></div>
+      <div class="ordersum__row ordersum__total"><span class="lbl">Order Total</span><b id="sumTotal">$0.00</b></div>
+      <a href="shop.html" class="ordersum__checkout" style="text-decoration:none">Continue shopping</a>
+    </aside>
+  </div>
+</section>
+
+<section class="subscribe reveal">
+  <h2 class="subscribe__title">Subscribe to get 10% off your first order</h2>
+  <form class="subscribe__form" onsubmit="return false"><div class="subscribe__input"><input type="email" placeholder="Drop your email here" aria-label="Email" /></div><button class="subscribe__btn" aria-label="Subscribe"><img src="assets/svg/arrow_big.svg" alt="" /></button></form>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer__cols">
+    <div class="footer__brand">
+      <div class="footer__logo"><img src="assets/svg/velvety_logo_footer.svg" alt="Velvety" class="footer__logo-word" /><img src="assets/svg/facial_skincare_footer.svg" alt="Facial &amp; skincare" class="footer__logo-sub" /></div>
+      <div class="footer__hours"><p class="muted">Opening hours</p><p class="dark">Monday to Saturday: 10:30 a.m. to 7 p.m.</p></div>
+      <div class="footer__social"><a href="#" aria-label="Instagram"><img src="assets/svg/ic_instagram.svg" alt=""></a><a href="#" aria-label="Twitter"><img src="assets/svg/ic_twitter.svg" alt=""></a><a href="#" aria-label="Facebook"><img src="assets/svg/ic_facebook.svg" alt=""></a></div>
+    </div>
+    <div class="footer__menu footer__menu--l"><p class="footer__h">Shop</p><ul><li>Skincare</li><li>Facial</li><li>Soap</li><li>Candles</li><li>Auto Fragrances</li><li>Gifts</li></ul></div>
+    <div class="footer__menu"><p class="footer__h">Help Desk</p><ul><li>Chat</li><li>FAQ</li><li>Shipping &amp; Returns</li><li>Contact</li><li>Policies</li><li>Accessibility</li><li>My Account</li></ul></div>
+    <div class="footer__menu footer__menu--l"><p class="footer__h">Stores</p><ul><li>Manhattan</li><li>Brooklyn</li><li>Tokyo</li><li>Jakarta</li><li>Paris</li><li>Buenos Aires</li></ul></div>
+    <div class="footer__credits"><span>SITE CREDITS</span><span>©2023 VELVETY</span></div>
+  </div>
+  <div class="footer__bar"><p>© Designed <b>with curiosity</b> Crafted with <b>intention.</b></p><div class="footer__legal"><span>Licenses</span><span>Privacy</span><span>Terms</span></div></div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

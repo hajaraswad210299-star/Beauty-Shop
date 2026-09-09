@@ -10,6 +10,7 @@
 
   const trash = '<svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   const mark = '<svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4V4z" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const bag = '<svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke-linecap="round"/></svg>';
 
   // Seed a default cart (matching the design) only on the very first visit.
   let raw = null;
@@ -44,11 +45,14 @@
     syncNav();
 
     if (!cart.length) {
-      listEl.innerHTML = '<div class="cartempty"><p>There are no items in your bag.</p><a href="shop.html">Shop now</a></div>';
-      const os = $("#orderSummary"); if (os) os.style.display = "none";
+      listEl.innerHTML = '<div class="cartempty"><div class="cartempty__bag">' + bag + "</div>" +
+        "<p>There are no items in your bag.</p><a href=\"shop.html\">Shop now</a></div>";
+      if (sumItems) sumItems.innerHTML = "";
+      ["#sumShipping", "#sumBeforeTax", "#sumTax", "#sumTotal"].forEach((s) => { const e = $(s); if (e) e.textContent = "-"; });
+      const co0 = $(".ordersum__checkout"); if (co0) co0.classList.add("is-disabled");
       return;
     }
-    const os = $("#orderSummary"); if (os) os.style.display = "";
+    const co1 = $(".ordersum__checkout"); if (co1) co1.classList.remove("is-disabled");
 
     listEl.innerHTML = cart.map((it, i) =>
       '<div class="cartrow" data-i="' + i + '">' +
@@ -86,9 +90,11 @@
   }
   render();
 
-  /* checkout feedback */
+  /* checkout → checkout page */
   const co = $(".ordersum__checkout");
-  if (co) co.addEventListener("click", () => { const t = co.textContent; co.textContent = "Order placed ✓"; setTimeout(() => (co.textContent = t), 1600); });
+  if (co) co.addEventListener("click", () => { if (cart.length) window.location.href = "checkout.html"; });
+  const pp = $(".ordersum__paypal");
+  if (pp) pp.addEventListener("click", () => { if (cart.length) window.location.href = "checkout-paypal.html"; });
 
   /* related carousel */
   const track = $(".pdrel__track");

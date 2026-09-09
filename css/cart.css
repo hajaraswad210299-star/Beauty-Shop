@@ -31,10 +31,14 @@
 .cartrow__step .q{min-width:18px;text-align:center;font-size:16px}
 
 /* ---- empty ---- */
-.cartempty{padding:60px 0;display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.cartempty{padding:60px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;text-align:center;min-height:360px}
+.cartempty__bag{width:120px;height:120px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center}
+.cartempty__bag svg{width:52px;height:52px;stroke:var(--g80);fill:none;stroke-width:1.4}
 .cartempty p{font-family:var(--serif);font-size:28px;color:var(--g100)}
 .cartempty a{height:52px;padding:0 40px;background:var(--g100);color:var(--c0);display:inline-flex;align-items:center;justify-content:center;font-size:16px;transition:background .35s var(--ease),transform .35s var(--ease)}
 .cartempty a:hover{background:var(--pressed);transform:translateY(-2px)}
+/* disabled checkout in empty state */
+.ordersum__checkout.is-disabled{background:var(--surface);color:var(--g40);pointer-events:none}
 
 /* ---- order summary ---- */
 .ordersum{background:var(--surface);padding:40px;display:flex;flex-direction:column;gap:24px}

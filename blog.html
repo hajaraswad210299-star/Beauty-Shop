@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VELVETY — Blog</title>
+<meta name="description" content="Velvety journal — scented stories for every mood." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/about.css" />
+<link rel="stylesheet" href="css/shop.css" />
+<link rel="stylesheet" href="css/blog.css" />
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html" aria-label="Velvety home">
+      <img src="assets/svg/velvety_logo_nav.svg" alt="Velvety" class="nav__logo-word" />
+      <img src="assets/svg/facial_skincare_nav.svg" alt="Facial &amp; skincare" class="nav__logo-sub" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <div class="nav__left">
+        <button class="nav__link nav__pages" type="button">PAGES<img src="assets/svg/arrow_down.svg" alt="" class="nav__caret" /></button>
+        <a class="nav__link" href="shop.html">SHOP</a>
+        <a class="nav__link" href="about.html">ABOUT</a>
+      </div>
+      <div class="nav__right">
+        <a class="nav__link" href="#">LOGIN</a>
+        <a class="nav__link" href="#">CART (0)</a>
+      </div>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO featured -->
+<section class="bloghero" id="hero">
+  <div class="bloghero__bg" style="background-image:url('assets/img/blog_hero.png')"></div>
+  <a class="bloghero__inner" href="blog-detail.html">
+    <p class="bloghero__eyebrow">Nature Story</p>
+    <h1 class="bloghero__title">Aloe vera elixir: Nature’s blessing for radiant skin</h1>
+  </a>
+</section>
+
+<!-- Featured row -->
+<section class="postrow">
+  <article class="post-card" onclick="location.href='blog-detail.html'">
+    <div class="post-card__img"><img src="assets/img/blog_feat1.png" alt=""></div>
+    <p class="post-card__cat">Facial Care · March 4, 2024</p>
+    <h3 class="post-card__title">Revitalize your routine with facial massage</h3>
+    <a href="blog-detail.html" class="btn-text">Read more <img src="assets/svg/arrow_right.svg" alt=""></a>
+  </article>
+  <article class="post-card" onclick="location.href='blog-detail.html'">
+    <div class="post-card__img"><img src="assets/img/blog_feat2.png" alt=""></div>
+    <p class="post-card__cat">Wellness · February 18, 2024</p>
+    <h3 class="post-card__title">How stress impacts your complexion</h3>
+    <a href="blog-detail.html" class="btn-text">Read more <img src="assets/svg/arrow_right.svg" alt=""></a>
+  </article>
+  <article class="post-card" onclick="location.href='blog-detail.html'">
+    <div class="post-card__img"><img src="assets/img/blog_feat3.png" alt=""></div>
+    <p class="post-card__cat">Routine · January 29, 2024</p>
+    <h3 class="post-card__title">Establishing a skincare routine</h3>
+    <a href="blog-detail.html" class="btn-text">Read more <img src="assets/svg/arrow_right.svg" alt=""></a>
+  </article>
+</section>
+
+<!-- CTA bar -->
+<section class="cta-bar reveal">
+  <p>Let’s see the processing of our products</p>
+  <span class="cta-bar__arrow"><img src="assets/svg/arrow_left1.svg" alt="" /></span>
+</section>
+
+<!-- Popular articles -->
+<section class="popular">
+  <div class="popular__head reveal">
+    <h2 class="popular__title">Popular articles</h2>
+  </div>
+  <div class="filterbar reveal">
+    <div class="filter-tabs" id="filterTabs">
+      <button class="pill is-active">All categories</button>
+      <button class="pill">Protect</button>
+      <button class="pill">Regenerates</button>
+      <button class="pill">Revitalizes</button>
+      <button class="pill">Strengthens</button>
+      <button class="pill">Hydrate</button>
+      <button class="pill">Soothes</button>
+    </div>
+    <button class="tabs-scroll" id="tabsScroll" aria-label="Scroll categories"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></button>
+    <div class="filter-actions"><button class="filter-btn">Sort by <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button></div>
+  </div>
+  <p class="popular__count reveal">Showing 9 of 30</p>
+
+  <div class="postgrid reveal">
+    <article class="post-card" onclick="location.href='blog-detail.html'"><div class="post-card__img"><img src="assets/img/blog1.png" alt=""></div><p class="post-card__meta">May 12, 2024 · Ava Bennett</p><h3 class="post-card__title">Unlocking the secret of glowing skin</h3><p class="post-card__excerpt">Discover the science that underpins a routine that truly nourishes and calms, leaving you radiant.</p><a href="blog-detail.html" class="btn-text">Read more <img src="assets/svg/arrow_right.svg" alt=""></a></article>
+    <article class="post-card" onclick="location.href='blog-detail.html'"><div class="post-card__img"><img src="assets/img/blog2.png" alt=""></div><p class="post-card__meta">June 21, 2024 · Noah Turner</p><h3 class="post-card__title">The power of hydration &amp; skincare mist</h3><p class="post-card__excerpt">A simple mist can transform tired skin — here’s how to layer it into your day.</p><a href="blog-detail.html" class="btn-text">Read more <img src="assets/svg/arrow_right.svg" alt=""></a></article>
+    <article class="post-card" onclick="location.href='blog-detail.html'"><div class="post-card__img"><img src="assets/img/blogd_hero.png" alt=""></div><p class="post-card__meta">July 3, 2024 · Sophia Carter</p><h3 class="post-card__title">Navigating the world of serums</h3><p class="post-card__excerpt">Clear the myths and build a nourishing ritual with the right serum for your skin.</p><a href="blog-detail.html" class="btn-text">Read more <img src="assets/svg/arrow_right.svg" alt=""></a></article>
+    <article class="post-card" onclick="location.href='blog-detail.html'"><div class="post-card__img"><img src="assets/img/blog3.png" alt=""></div><p class="post-card__meta">August 9, 2024 · Ella Clarke</p><h3 class="post-card__title">Skincare for all: navigating sensitive skin</h3><p class="post-card__excerpt">Gentle, effective formulas that respect a delicate barrier and calm reactivity.</p><a href="blog-detail.html" class="btn-text">Read more <img src="assets/svg/arrow_right.svg" alt=""></a></article>
+    <article class="post-card" onclick="location.href='blog-detail.html'"><div class="post-card__img"><img src="assets/img/blog4.png" alt=""></div><p class="post-card__meta">September 5, 2024 · Liam Morgan</p><h3 class="post-card__title">From the inside out: nutrition for glowing skin</h3><p class="post-card__excerpt">What you eat shows on your skin — the foods that fuel a natural glow.</p><a href="blog-detail.html" class="btn-text">Read more <img src="assets/svg/arrow_right.svg" alt=""></a></article>
+    <article class="post-card" onclick="location.href='blog-detail.html'"><div class="post-card__img"><img src="assets/img/blog5.png" alt=""></div><p class="post-card__meta">October 1, 2024 · Nina Carter</p><h3 class="post-card__title">Natural ingredients for skincare</h3><p class="post-card__excerpt">Explore the benefits of plant-derived ingredients in your everyday products.</p><a href="blog-detail.html" class="btn-text">Read more <img src="assets/svg/arrow_right.svg" alt=""></a></article>
+    <article class="post-card" onclick="location.href='blog-detail.html'"><div class="post-card__img"><img src="assets/img/blog6.png" alt=""></div><p class="post-card__meta">November 12, 2024 · Oliver Davis</p><h3 class="post-card__title">Achieving skin radiance naturally</h3><p class="post-card__excerpt">Simple, natural methods to reveal a brighter, more even complexion.</p><a href="blog-detail.html" class="btn-text">Read more <img src="assets/svg/arrow_right.svg" alt=""></a></article>
+    <article class="post-card" onclick="location.href='blog-detail.html'"><div class="post-card__img"><img src="assets/img/blog7.png" alt=""></div><p class="post-card__meta">December 12, 2024 · Sofia Adams</p><h3 class="post-card__title">The art of sunscreen: protecting your radiance</h3><p class="post-card__excerpt">Why daily SPF is the single best step for lasting, healthy skin.</p><a href="blog-detail.html" class="btn-text">Read more <img src="assets/svg/arrow_right.svg" alt=""></a></article>
+    <article class="post-card" onclick="location.href='blog-detail.html'"><div class="post-card__img"><img src="assets/img/blog8.png" alt=""></div><p class="post-card__meta">January 4, 2025 · Emma White</p><h3 class="post-card__title">Morning vs. night: crafting your skincare routine</h3><p class="post-card__excerpt">Learn the essentials of morning and nighttime rituals for balanced skin.</p><a href="blog-detail.html" class="btn-text">Read more <img src="assets/svg/arrow_right.svg" alt=""></a></article>
+  </div>
+
+  <div class="pagination reveal">
+    <button class="page-arrow prev" aria-label="Previous"><img src="assets/svg/arrow_right.svg" alt=""></button>
+    <div class="pagination__nums"><button class="page-num is-active">1</button><button class="page-num">2</button><span class="page-dots">…</span><button class="page-num">6</button></div>
+    <button class="page-arrow next" aria-label="Next"><img src="assets/svg/arrow_right.svg" alt=""></button>
+  </div>
+</section>
+
+<!-- Try Our Service -->
+<section class="service reveal">
+  <div class="service__img"><img src="assets/svg/try_service_img.svg" alt="" /></div>
+  <div class="service__content">
+    <p class="eyebrow">Try Our Service</p>
+    <h2 class="h2">Your skin diagnosis in 3 minutes</h2>
+    <p class="service__text">Say hello to a more radiant, healthier you with personalized skincare that’s as unique as you are.</p>
+    <a href="#" class="btn-outline"><span>Start my diagnosis</span><img src="assets/svg/arrow_right.svg" alt=""></a>
+  </div>
+</section>
+
+<!-- Subscribe -->
+<section class="subscribe reveal">
+  <h2 class="subscribe__title">Subscribe to get 10% off your first order</h2>
+  <form class="subscribe__form" onsubmit="return false"><div class="subscribe__input"><input type="email" placeholder="Drop your email here" aria-label="Email" /></div><button class="subscribe__btn" aria-label="Subscribe"><img src="assets/svg/arrow_big.svg" alt="" /></button></form>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer__cols">
+    <div class="footer__brand">
+      <div class="footer__logo"><img src="assets/svg/velvety_logo_footer.svg" alt="Velvety" class="footer__logo-word" /><img src="assets/svg/facial_skincare_footer.svg" alt="Facial &amp; skincare" class="footer__logo-sub" /></div>
+      <div class="footer__hours"><p class="muted">Opening hours</p><p class="dark">Monday to Saturday: 10:30 a.m. to 7 p.m.</p></div>
+      <div class="footer__social"><a href="#" aria-label="Instagram"><img src="assets/svg/ic_instagram.svg" alt=""></a><a href="#" aria-label="Twitter"><img src="assets/svg/ic_twitter.svg" alt=""></a><a href="#" aria-label="Facebook"><img src="assets/svg/ic_facebook.svg" alt=""></a></div>
+    </div>
+    <div class="footer__menu footer__menu--l"><p class="footer__h">Shop</p><ul><li>Skincare</li><li>Facial</li><li>Soap</li><li>Candles</li><li>Auto Fragrances</li><li>Gifts</li></ul></div>
+    <div class="footer__menu"><p class="footer__h">Help Desk</p><ul><li>Chat</li><li>FAQ</li><li>Shipping &amp; Returns</li><li>Contact</li><li>Policies</li><li>Accessibility</li><li>My Account</li></ul></div>
+    <div class="footer__menu footer__menu--l"><p class="footer__h">Stores</p><ul><li>Manhattan</li><li>Brooklyn</li><li>Tokyo</li><li>Jakarta</li><li>Paris</li><li>Buenos Aires</li></ul></div>
+    <div class="footer__credits"><span>SITE CREDITS</span><span>©2023 VELVETY</span></div>
+  </div>
+  <div class="footer__bar"><p>© Designed <b>with curiosity</b> Crafted with <b>intention.</b></p><div class="footer__legal"><span>Licenses</span><span>Privacy</span><span>Terms</span></div></div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>
