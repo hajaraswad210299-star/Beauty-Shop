@@ -42,6 +42,7 @@
 }
 
 *,*::before,*::after{box-sizing:border-box}
+.is-linked{cursor:pointer}
 html{scroll-behavior:smooth}
 body{
   margin:0;background:var(--c0);color:var(--g100);

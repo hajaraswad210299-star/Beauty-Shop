@@ -176,4 +176,16 @@
       }
     });
   }
+
+  /* ---------- Product cards → detail page ---------- */
+  $$(".product-lg, .product-sm, .shop-card").forEach((card) => {
+    card.classList.add("is-linked");
+    card.setAttribute("role", "link");
+    card.setAttribute("tabindex", "0");
+    const go = () => { window.location.href = "detail.html"; };
+    card.addEventListener("click", go);
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); }
+    });
+  });
 })();
