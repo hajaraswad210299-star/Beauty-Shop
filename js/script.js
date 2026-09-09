@@ -11,7 +11,10 @@
   const nav = $("#nav");
   const hero = $("#hero");
   const onScroll = () => {
-    const trigger = (hero ? hero.offsetHeight : 500) - 90;
+    // Pages without a dark hero image (plain/white bg) keep the solid,
+    // dark-text navbar always so it stays readable.
+    if (!hero) { nav.classList.add("is-solid"); return; }
+    const trigger = hero.offsetHeight - 90;
     nav.classList.toggle("is-solid", window.scrollY > trigger);
   };
   window.addEventListener("scroll", onScroll, { passive: true });
