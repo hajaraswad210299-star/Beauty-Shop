@@ -10,6 +10,8 @@
 
 .co__grid{display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:start}
 .co__left{display:flex;flex-direction:column;gap:40px}
+/* keep the Order Summary in view while the long form scrolls */
+.co__grid .ordersum{position:sticky;top:104px;align-self:start}
 
 /* Apple / express pay */
 .co__express{height:56px;background:var(--g100);color:var(--c0);display:flex;align-items:center;justify-content:center;gap:8px;font-size:18px;transition:background .35s var(--ease),transform .35s var(--ease)}
@@ -73,6 +75,7 @@
 
 @media(max-width:900px){
   .co__grid{grid-template-columns:1fr;gap:40px}
+  .co__grid .ordersum{position:static}
   .co-panel,.co-info{grid-template-columns:1fr}
 }
 @media(max-width:560px){
