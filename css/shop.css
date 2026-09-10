@@ -57,7 +57,7 @@
 .shop-card__img{margin:24px 24px 0;background:var(--surface);flex:1 1 auto;min-height:0;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .shop-card__img::before{content:"";position:absolute;width:74%;aspect-ratio:1/1;border-radius:50%;
   background:radial-gradient(circle at 50% 45%, rgba(255,255,255,.55), rgba(197,213,190,.35) 55%, transparent 72%);}
-.shop-card__img .bottle{position:absolute;inset:14px 0;z-index:2;object-fit:cover;object-position:center;transition:transform .6s var(--ease)}
+.shop-card__img .bottle{position:absolute;inset:12px 0 34px;z-index:2;object-fit:cover;object-position:center top;filter:drop-shadow(0 16px 13px rgba(16,28,16,.3));transition:transform .6s var(--ease),filter .6s var(--ease)}
 .shop-card:hover .shop-card__img .bottle{transform:scale(1.05)}
 .shop-card__desc{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:24px}
 .shop-card__name{display:flex;flex-direction:column;gap:10px}

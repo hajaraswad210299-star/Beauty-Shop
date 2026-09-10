@@ -173,8 +173,8 @@ ul{margin:0;padding:0;list-style:none}
 .product-lg__img{position:relative;height:528px;background:var(--surface);overflow:hidden;display:flex;align-items:center;justify-content:center}
 .product-lg--oval .product-lg__img{background:transparent}
 .product-lg__img .oval{position:absolute;width:100%;height:100%;background:var(--surface);border-radius:2000px}
-.product-lg__img .blob{position:absolute;width:66%;height:auto;top:57%;left:50%;transform:translate(-50%,-50%);filter:blur(5px)}
-.product-lg__img .bottle{position:absolute;inset:26px 0;z-index:2;object-fit:cover;object-position:center;transition:transform .6s var(--ease)}
+.product-lg__img .blob{display:none}
+.product-lg__img .bottle{position:absolute;inset:20px 0 58px;z-index:2;object-fit:cover;object-position:center top;filter:drop-shadow(0 22px 15px rgba(16,28,16,.32));transition:transform .6s var(--ease),filter .6s var(--ease)}
 .product-lg:hover .bottle{transform:scale(1.05)}
 .product-lg__desc{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
 .np{display:flex;flex-direction:column;gap:10px;color:var(--g100)}
@@ -228,8 +228,8 @@ ul{margin:0;padding:0;list-style:none}
 .product-sm{border:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;background:var(--c0);transition:transform .4s var(--ease)}
 .product-sm:hover{transform:translateY(-6px)}
 .product-sm__img{position:relative;height:320px;background:var(--surface);overflow:hidden;display:flex;align-items:center;justify-content:center}
-.product-sm__img .blob{position:absolute;width:66%;height:auto;top:57%;left:50%;transform:translate(-50%,-50%);filter:blur(4px)}
-.product-sm__img .bottle{position:absolute;inset:16px 0;z-index:2;object-fit:cover;object-position:center;transition:transform .6s var(--ease)}
+.product-sm__img .blob{display:none}
+.product-sm__img .bottle{position:absolute;inset:14px 0 40px;z-index:2;object-fit:cover;object-position:center top;filter:drop-shadow(0 16px 12px rgba(16,28,16,.3));transition:transform .6s var(--ease),filter .6s var(--ease)}
 .product-sm:hover .bottle{transform:scale(1.07)}
 .product-sm__desc{border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px;padding:24px}
 .product-sm__desc h3{font-size:22px;font-weight:300;color:var(--g100)}
