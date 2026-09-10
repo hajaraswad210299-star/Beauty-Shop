@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VELVETY — Message Sent</title>
+<meta name="description" content="Your message has been sent — Velvety facial &amp; skincare." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+<style>
+  .sent{width:100%;min-height:70vh;padding:calc(84px + 80px) var(--gutter) 96px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:24px}
+  .sent__badge{width:120px;height:120px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+  .sent__badge svg{width:56px;height:56px;stroke:var(--g80);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .sent__eyebrow{margin:0}
+  .sent__title{font-family:var(--serif);font-weight:300;font-size:clamp(44px,7vw,84px);line-height:1.05;color:var(--g100);max-width:900px}
+  .sent__text{margin:0;font-size:20px;line-height:1.5;color:var(--g80);max-width:560px}
+  .sent__actions{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+  .sent__home{height:52px;padding:0 40px;background:var(--g100);color:var(--c0);display:inline-flex;align-items:center;justify-content:center;font-size:16px;transition:background .35s var(--ease),transform .35s var(--ease)}
+  .sent__home:hover{background:var(--pressed);transform:translateY(-2px)}
+  @keyframes pop{0%{transform:scale(.6);opacity:0}60%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+  .sent__badge{animation:pop .6s var(--ease) both}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .sent__badge svg path{stroke-dasharray:48;stroke-dashoffset:48;animation:draw .6s .35s var(--ease) forwards}
+  @media(prefers-reduced-motion:reduce){.sent__badge,.sent__badge svg path{animation:none;stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+
+<header class="nav is-solid" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html" aria-label="Velvety home">
+      <img src="assets/svg/velvety_logo_nav.svg" alt="Velvety" class="nav__logo-word" />
+      <img src="assets/svg/facial_skincare_nav.svg" alt="Facial &amp; skincare" class="nav__logo-sub" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <div class="nav__left">
+        <button class="nav__link nav__pages" type="button">PAGES<img src="assets/svg/arrow_down.svg" alt="" class="nav__caret" /></button>
+        <a class="nav__link" href="shop.html">SHOP</a>
+        <a class="nav__link" href="about.html">ABOUT</a>
+      </div>
+      <div class="nav__right">
+        <a class="nav__link" href="#">LOGIN</a>
+        <a class="nav__link" href="#">CART (0)</a>
+      </div>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="sent">
+  <div class="sent__badge"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+  <p class="eyebrow sent__eyebrow">Contact</p>
+  <h1 class="sent__title">Your message has been sent!</h1>
+  <p class="sent__text">Thank you for reaching out. Our team will get back to you within 24 hours with the care and attention you deserve.</p>
+  <div class="sent__actions">
+    <a href="index.html" class="sent__home">Back to home</a>
+    <a href="shop.html" class="btn-outline"><span>Continue shopping</span><img src="assets/svg/arrow_right.svg" alt=""></a>
+  </div>
+</section>
+
+<section class="subscribe reveal">
+  <h2 class="subscribe__title">Subscribe to get 10% off your first order</h2>
+  <form class="subscribe__form" onsubmit="return false"><div class="subscribe__input"><input type="email" placeholder="Drop your email here" aria-label="Email" /></div><button class="subscribe__btn" aria-label="Subscribe"><img src="assets/svg/arrow_big.svg" alt="" /></button></form>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer__cols">
+    <div class="footer__brand">
+      <div class="footer__logo"><img src="assets/svg/velvety_logo_footer.svg" alt="Velvety" class="footer__logo-word" /><img src="assets/svg/facial_skincare_footer.svg" alt="Facial &amp; skincare" class="footer__logo-sub" /></div>
+      <div class="footer__hours"><p class="muted">Opening hours</p><p class="dark">Monday to Saturday: 10:30 a.m. to 7 p.m.</p></div>
+      <div class="footer__social"><a href="#" aria-label="Instagram"><img src="assets/svg/ic_instagram.svg" alt=""></a><a href="#" aria-label="Twitter"><img src="assets/svg/ic_twitter.svg" alt=""></a><a href="#" aria-label="Facebook"><img src="assets/svg/ic_facebook.svg" alt=""></a></div>
+    </div>
+    <div class="footer__menu footer__menu--l"><p class="footer__h">Shop</p><ul><li>Skincare</li><li>Facial</li><li>Soap</li><li>Candles</li><li>Auto Fragrances</li><li>Gifts</li></ul></div>
+    <div class="footer__menu"><p class="footer__h">Help Desk</p><ul><li>Chat</li><li>FAQ</li><li>Shipping &amp; Returns</li><li>Contact</li><li>Policies</li><li>Accessibility</li><li>My Account</li></ul></div>
+    <div class="footer__menu footer__menu--l"><p class="footer__h">Stores</p><ul><li>Manhattan</li><li>Brooklyn</li><li>Tokyo</li><li>Jakarta</li><li>Paris</li><li>Buenos Aires</li></ul></div>
+    <div class="footer__credits"><span>SITE CREDITS</span><span>©2023 VELVETY</span></div>
+  </div>
+  <div class="footer__bar"><p>© Designed <b>with curiosity</b> Crafted with <b>intention.</b></p><div class="footer__legal"><span>Licenses</span><span>Privacy</span><span>Terms</span></div></div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>

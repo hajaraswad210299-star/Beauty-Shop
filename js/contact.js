@@ -33,7 +33,8 @@
       const json = await res.json().catch(() => ({}));
       if (res.ok && (json.success === true || json.success === "true")) {
         form.reset();
-        setStatus("Thank you! Your message has been sent — we’ll get back to you within 24 hours.", "is-ok");
+        setStatus("Message sent — redirecting…", "is-ok");
+        window.location.href = "message-sent.html";
       } else {
         throw new Error(json.message || "Request failed");
       }
