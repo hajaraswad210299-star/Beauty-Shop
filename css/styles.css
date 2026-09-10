@@ -83,8 +83,13 @@ ul{margin:0;padding:0;list-style:none}
 .nav__link{position:relative;font-size:16px;letter-spacing:.3px;color:var(--white);display:inline-flex;align-items:center;gap:8px;transition:color .4s var(--ease);white-space:nowrap}
 .nav__link::after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;background:currentColor;transition:width .35s var(--ease)}
 .nav__link:hover::after{width:100%}
-.nav__caret{width:20px;height:20px;filter:brightness(0) invert(1);transition:transform .3s var(--ease),filter .4s var(--ease)}
-.nav__pages:hover .nav__caret{transform:translateY(2px)}
+/* PAGES caret: CSS chevron that follows the link colour (readable in every nav state) */
+.nav__caret{display:none}
+.nav__pages::after{content:"";width:8px;height:8px;flex:0 0 auto;
+  border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;
+  transform:translateY(-2px) rotate(45deg);transition:transform .3s var(--ease)}
+.nav__pages:hover::after{transform:translateY(0) rotate(45deg)}
+.nav__left.open .nav__pages::after{transform:translateY(1px) rotate(-135deg)}
 .nav__burger{display:none;flex-direction:column;gap:5px;padding:6px;z-index:110}
 .nav__burger span{display:block;width:26px;height:2px;background:var(--white);transition:.35s var(--ease)}
 
