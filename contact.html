@@ -43,15 +43,19 @@
       <h1>Need Help?<br>Contact Us!</h1>
       <p class="contact__intro">Your beauty is our priority, and we’re here to assist you. Whether you have questions, need personalized skincare advice, or want to share your experience, feel free to reach out. Our dedicated team is ready to provide prompt and friendly assistance.</p>
     </div>
-    <form class="contact__form" onsubmit="return false">
+    <form class="contact__form" id="contactForm" action="https://formsubmit.co/hajaraswad210299@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from VELVETY contact form">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="contact__row">
-        <div class="field"><label>First Name</label><input type="text" placeholder="Enter your first name"></div>
-        <div class="field"><label>Last Name</label><input type="text" placeholder="Enter your last name"></div>
+        <div class="field"><label>First Name</label><input type="text" name="First Name" placeholder="Enter your first name" required></div>
+        <div class="field"><label>Last Name</label><input type="text" name="Last Name" placeholder="Enter your last name"></div>
       </div>
       <div class="contact__row">
-        <div class="field"><label>Email Address</label><input type="email" placeholder="Enter your email"></div>
+        <div class="field"><label>Email Address</label><input type="email" name="Email" placeholder="Enter your email" required></div>
         <div class="field"><label>Reason</label>
-          <select required>
+          <select name="Reason" required>
             <option value="" disabled selected>Select your reason</option>
             <option>General inquiry</option>
             <option>Skincare advice</option>
@@ -61,9 +65,10 @@
           </select>
         </div>
       </div>
-      <div class="field full"><label>Phone</label><input type="tel" placeholder="Enter your phone number"></div>
-      <div class="field full"><label>Message</label><textarea rows="3" placeholder="Enter your message"></textarea></div>
+      <div class="field full"><label>Phone</label><input type="tel" name="Phone" placeholder="Enter your phone number"></div>
+      <div class="field full"><label>Message</label><textarea rows="3" name="Message" placeholder="Enter your message" required></textarea></div>
       <button class="contact__send" type="submit">Send message</button>
+      <p class="contact__status" id="contactStatus" role="status" aria-live="polite"></p>
     </form>
   </div>
 
@@ -120,5 +125,6 @@
 
 <script src="js/script.js"></script>
 <script src="js/ui.js"></script>
+<script src="js/contact.js"></script>
 </body>
 </html>
