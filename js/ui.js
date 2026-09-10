@@ -18,7 +18,7 @@
     ];
     const col2 = [
       ["Order Confirmation", "confirmation.html"], ["Licenses", "#"], ["Changelog", "#"],
-      ["Contact Us", "#"], ["404", "#"], ["401", "#"], ["Styleguide", "#"],
+      ["Contact Us", "contact.html"], ["404", "#"], ["401", "#"], ["Styleguide", "#"],
     ];
     const mkCol = (items) => {
       const col = document.createElement("div");

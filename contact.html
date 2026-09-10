@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VELVETY — Contact Us</title>
+<meta name="description" content="Need help? Contact Velvety — we're here to assist you." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/checkout.css" />
+<link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+<header class="nav is-solid" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html" aria-label="Velvety home">
+      <img src="assets/svg/velvety_logo_nav.svg" alt="Velvety" class="nav__logo-word" />
+      <img src="assets/svg/facial_skincare_nav.svg" alt="Facial &amp; skincare" class="nav__logo-sub" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <div class="nav__left">
+        <button class="nav__link nav__pages" type="button">PAGES<img src="assets/svg/arrow_down.svg" alt="" class="nav__caret" /></button>
+        <a class="nav__link" href="shop.html">SHOP</a>
+        <a class="nav__link" href="about.html">ABOUT</a>
+      </div>
+      <div class="nav__right">
+        <a class="nav__link" href="#">LOGIN</a>
+        <a class="nav__link" href="#">CART (0)</a>
+      </div>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="contact">
+  <!-- Left: form -->
+  <div class="contact__main">
+    <div class="contact__head">
+      <h1>Need Help?<br>Contact Us!</h1>
+      <p class="contact__intro">Your beauty is our priority, and we’re here to assist you. Whether you have questions, need personalized skincare advice, or want to share your experience, feel free to reach out. Our dedicated team is ready to provide prompt and friendly assistance.</p>
+    </div>
+    <form class="contact__form" onsubmit="return false">
+      <div class="contact__row">
+        <div class="field"><label>First Name</label><input type="text" placeholder="Enter your first name"></div>
+        <div class="field"><label>Last Name</label><input type="text" placeholder="Enter your last name"></div>
+      </div>
+      <div class="contact__row">
+        <div class="field"><label>Email Address</label><input type="email" placeholder="Enter your email"></div>
+        <div class="field"><label>Reason</label>
+          <select required>
+            <option value="" disabled selected>Select your reason</option>
+            <option>General inquiry</option>
+            <option>Skincare advice</option>
+            <option>Order &amp; shipping</option>
+            <option>Returns &amp; refunds</option>
+            <option>Partnership</option>
+          </select>
+        </div>
+      </div>
+      <div class="field full"><label>Phone</label><input type="tel" placeholder="Enter your phone number"></div>
+      <div class="field full"><label>Message</label><textarea rows="3" placeholder="Enter your message"></textarea></div>
+      <button class="contact__send" type="submit">Send message</button>
+    </form>
+  </div>
+
+  <!-- Right: info -->
+  <aside class="contact__info">
+    <div class="info-block">
+      <span class="info-block__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+      <div class="info-block__body">
+        <h3>Learn more about Velvety</h3>
+        <a href="about.html" class="btn-outline"><span>About us</span><img src="assets/svg/arrow_right.svg" alt=""></a>
+      </div>
+    </div>
+    <div class="info-block">
+      <span class="info-block__icon"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+      <div class="info-block__body">
+        <h3>Check out new product</h3>
+        <a href="shop.html" class="btn-outline"><span>Go shopping now</span><img src="assets/svg/arrow_right.svg" alt=""></a>
+      </div>
+    </div>
+    <div class="info-block">
+      <span class="info-block__icon"><svg viewBox="0 0 24 24"><circle cx="7" cy="7" r="1.6"/><circle cx="12" cy="7" r="1.6"/><circle cx="17" cy="7" r="1.6"/><circle cx="7" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="17" cy="12" r="1.6"/><circle cx="7" cy="17" r="1.6"/><circle cx="12" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg></span>
+      <div class="info-block__body">
+        <h3>Where to find us</h3>
+        <div class="info-block__links">
+          <a href="mailto:velvetyskincare@gmail.com">velvetyskincare@gmail.com</a>
+          <a href="mailto:velvety-product@gmail.com">velvety-product@gmail.com</a>
+        </div>
+        <p class="info-block__note">Our response time is 24 hours for general inquiries and customer support-related matters.</p>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section class="subscribe reveal">
+  <h2 class="subscribe__title">Subscribe to get 10% off your first order</h2>
+  <form class="subscribe__form" onsubmit="return false"><div class="subscribe__input"><input type="email" placeholder="Drop your email here" aria-label="Email" /></div><button class="subscribe__btn" aria-label="Subscribe"><img src="assets/svg/arrow_big.svg" alt="" /></button></form>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer__cols">
+    <div class="footer__brand">
+      <div class="footer__logo"><img src="assets/svg/velvety_logo_footer.svg" alt="Velvety" class="footer__logo-word" /><img src="assets/svg/facial_skincare_footer.svg" alt="Facial &amp; skincare" class="footer__logo-sub" /></div>
+      <div class="footer__hours"><p class="muted">Opening hours</p><p class="dark">Monday to Saturday: 10:30 a.m. to 7 p.m.</p></div>
+      <div class="footer__social"><a href="#" aria-label="Instagram"><img src="assets/svg/ic_instagram.svg" alt=""></a><a href="#" aria-label="Twitter"><img src="assets/svg/ic_twitter.svg" alt=""></a><a href="#" aria-label="Facebook"><img src="assets/svg/ic_facebook.svg" alt=""></a></div>
+    </div>
+    <div class="footer__menu footer__menu--l"><p class="footer__h">Shop</p><ul><li>Skincare</li><li>Facial</li><li>Soap</li><li>Candles</li><li>Auto Fragrances</li><li>Gifts</li></ul></div>
+    <div class="footer__menu"><p class="footer__h">Help Desk</p><ul><li>Chat</li><li>FAQ</li><li>Shipping &amp; Returns</li><li>Contact</li><li>Policies</li><li>Accessibility</li><li>My Account</li></ul></div>
+    <div class="footer__menu footer__menu--l"><p class="footer__h">Stores</p><ul><li>Manhattan</li><li>Brooklyn</li><li>Tokyo</li><li>Jakarta</li><li>Paris</li><li>Buenos Aires</li></ul></div>
+    <div class="footer__credits"><span>SITE CREDITS</span><span>©2023 VELVETY</span></div>
+  </div>
+  <div class="footer__bar"><p>© Designed <b>with curiosity</b> Crafted with <b>intention.</b></p><div class="footer__legal"><span>Licenses</span><span>Privacy</span><span>Terms</span></div></div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>
