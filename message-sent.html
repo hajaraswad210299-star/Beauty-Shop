@@ -4,27 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>VELVETY — Message Sent</title>
-<meta name="description" content="Your message has been sent — Velvety facial &amp; skincare." />
+<meta name="description" content="Thank you! Your message has been received — Velvety facial &amp; skincare." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/styles.css" />
-<style>
-  .sent{width:100%;min-height:70vh;padding:calc(84px + 80px) var(--gutter) 96px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:24px}
-  .sent__badge{width:120px;height:120px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;margin-bottom:8px}
-  .sent__badge svg{width:56px;height:56px;stroke:var(--g80);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-  .sent__eyebrow{margin:0}
-  .sent__title{font-family:var(--serif);font-weight:300;font-size:clamp(44px,7vw,84px);line-height:1.05;color:var(--g100);max-width:900px}
-  .sent__text{margin:0;font-size:20px;line-height:1.5;color:var(--g80);max-width:560px}
-  .sent__actions{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:16px}
-  .sent__home{height:52px;padding:0 40px;background:var(--g100);color:var(--c0);display:inline-flex;align-items:center;justify-content:center;font-size:16px;transition:background .35s var(--ease),transform .35s var(--ease)}
-  .sent__home:hover{background:var(--pressed);transform:translateY(-2px)}
-  @keyframes pop{0%{transform:scale(.6);opacity:0}60%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
-  .sent__badge{animation:pop .6s var(--ease) both}
-  @keyframes draw{to{stroke-dashoffset:0}}
-  .sent__badge svg path{stroke-dasharray:48;stroke-dashoffset:48;animation:draw .6s .35s var(--ease) forwards}
-  @media(prefers-reduced-motion:reduce){.sent__badge,.sent__badge svg path{animation:none;stroke-dashoffset:0}}
-</style>
+<link rel="stylesheet" href="css/checkout.css" />
+<link rel="stylesheet" href="css/contact.css" />
 </head>
 <body>
 
@@ -50,15 +36,48 @@
 </header>
 
 <main id="top">
-<section class="sent">
-  <div class="sent__badge"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
-  <p class="eyebrow sent__eyebrow">Contact</p>
-  <h1 class="sent__title">Your message has been sent!</h1>
-  <p class="sent__text">Thank you for reaching out. Our team will get back to you within 24 hours with the care and attention you deserve.</p>
-  <div class="sent__actions">
-    <a href="index.html" class="sent__home">Back to home</a>
-    <a href="shop.html" class="btn-outline"><span>Continue shopping</span><img src="assets/svg/arrow_right.svg" alt=""></a>
+<section class="contact">
+  <!-- Left: success -->
+  <div class="contact__main contact__main--success">
+    <div class="contact__head">
+      <h1>Need Help?<br>Contact Us!</h1>
+      <p class="contact__intro">Your beauty is our priority, and we’re here to assist you. Whether you have questions, need personalized skincare advice, or want to share your experience, feel free to reach out. Our dedicated team is ready to provide prompt and friendly assistance.</p>
+    </div>
+    <div class="contact__success" role="status">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.4l2.4 2.4 4.6-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Thank you! Your submission has been received!
+    </div>
+    <a href="contact.html" class="contact__again">Send Another Message</a>
   </div>
+
+  <!-- Right: info -->
+  <aside class="contact__info">
+    <div class="info-block">
+      <span class="info-block__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="9.5" r="3"/><path d="M5.5 19c0-3.3 2.9-5 6.5-5s6.5 1.7 6.5 5"/><path d="M12 2.6l7.2 4.1v8.6L12 21.4 4.8 15.3V6.7z"/></svg></span>
+      <div class="info-block__body">
+        <h3>Learn more about Velvety</h3>
+        <a href="about.html" class="btn-outline"><span>About us</span><img src="assets/svg/arrow_right.svg" alt=""></a>
+      </div>
+    </div>
+    <div class="info-block">
+      <span class="info-block__icon"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+      <div class="info-block__body">
+        <h3>Check out new product</h3>
+        <a href="shop.html" class="btn-outline"><span>Go shopping now</span><img src="assets/svg/arrow_right.svg" alt=""></a>
+      </div>
+    </div>
+    <div class="info-block">
+      <span class="info-block__icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c0-3 2.5-4.5 5.5-4.5s5.5 1.5 5.5 4.5"/><circle cx="17" cy="8.5" r="2.2"/><path d="M16 14.2c2.6.1 4.5 1.6 4.5 4"/></svg></span>
+      <div class="info-block__body">
+        <h3>Where to find us</h3>
+        <div class="info-block__links">
+          <a href="mailto:velvetyskincare@gmail.com">velvetyskincare@gmail.com</a>
+          <a href="mailto:velvety-product@gmail.com">velvety-product@gmail.com</a>
+        </div>
+        <p class="info-block__note">Our response time is 24 hours for general inquiries and customer support-related matters.</p>
+      </div>
+    </div>
+  </aside>
 </section>
 
 <section class="subscribe reveal">
