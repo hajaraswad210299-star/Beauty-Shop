@@ -17,7 +17,7 @@
 .pd__gallery{display:flex;flex-direction:column;gap:16px}
 .pd__main{background:var(--surface);border:1px solid var(--border);aspect-ratio:1/1.02;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .pd__main::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 45%, rgba(255,255,255,.5), rgba(197,213,190,.3) 55%, transparent 72%)}
-.pd__main img{position:absolute;inset:3% 0 13%;z-index:2;width:100%;object-fit:cover;object-position:center top;filter:drop-shadow(0 26px 20px rgba(16,28,16,.3));transition:transform .6s var(--ease),filter .6s var(--ease)}
+.pd__main img{position:absolute;inset:3% 0 13%;z-index:2;width:100%;object-fit:cover;object-position:center top;filter:drop-shadow(0 20px 20px rgba(16,28,16,.2));transition:transform .6s var(--ease),filter .6s var(--ease)}
 .pd__main:hover img{transform:scale(1.04)}
 .pd__thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 .pd__thumb{background:var(--surface);border:1px solid var(--border);aspect-ratio:1/1;overflow:hidden;position:relative;cursor:pointer;transition:border-color .3s}
