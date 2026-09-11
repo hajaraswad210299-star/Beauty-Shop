@@ -178,5 +178,20 @@
     });
   }
 
+  /* Public API so product cards on any page can add to the shared cart */
+  window.VelvetyCart = {
+    add(item) {
+      if (!item || !item.name) return;
+      const existing = cart.find((i) => i.name === item.name);
+      if (existing) existing.qty += item.qty || 1;
+      else cart.push({ name: item.name, cat: item.cat || "", price: +item.price || 0, old: item.old, img: item.img, qty: item.qty || 1 });
+      save();
+      renderNav();
+      openCart();
+    },
+    open: openCart,
+    count: () => totalQty(),
+  };
+
   renderNav();
 })();
