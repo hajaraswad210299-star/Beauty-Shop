@@ -88,12 +88,20 @@
 
   /* ---------- Category tabs: scroll + filter ---------- */
   const tabs = $("#filterTabs");
-  const scrollBtn = $("#tabsScroll");
-  if (tabs && scrollBtn) {
-    scrollBtn.addEventListener("click", () => {
-      const atEnd = tabs.scrollLeft + tabs.clientWidth >= tabs.scrollWidth - 8;
-      tabs.scrollBy({ left: atEnd ? -tabs.clientWidth : tabs.clientWidth * 0.8, behavior: "smooth" });
-    });
+  const nextBtn = $("#tabsScroll");
+  const prevBtn = $("#tabsScrollPrev");
+  if (tabs) {
+    const updateArrows = () => {
+      const atStart = tabs.scrollLeft <= 4;
+      const atEnd = tabs.scrollLeft + tabs.clientWidth >= tabs.scrollWidth - 4;
+      if (prevBtn) prevBtn.hidden = atStart;
+      if (nextBtn) nextBtn.hidden = atEnd;
+    };
+    if (nextBtn) nextBtn.addEventListener("click", () => tabs.scrollBy({ left: tabs.clientWidth * 0.7, behavior: "smooth" }));
+    if (prevBtn) prevBtn.addEventListener("click", () => tabs.scrollBy({ left: -tabs.clientWidth * 0.7, behavior: "smooth" }));
+    tabs.addEventListener("scroll", updateArrows, { passive: true });
+    window.addEventListener("resize", updateArrows);
+    updateArrows();
     let down = false, sx, sl;
     tabs.addEventListener("pointerdown", (e) => { down = true; sx = e.pageX; sl = tabs.scrollLeft; });
     window.addEventListener("pointerup", () => (down = false));

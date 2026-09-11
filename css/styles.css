@@ -174,7 +174,7 @@ ul{margin:0;padding:0;list-style:none}
 .product-lg--oval .product-lg__img{background:transparent}
 .product-lg__img .oval{position:absolute;width:100%;height:100%;background:var(--surface);border-radius:2000px}
 .product-lg__img .blob{display:none}
-.product-lg__img .bottle{position:absolute;inset:20px 0 58px;z-index:2;object-fit:cover;object-position:center top;filter:drop-shadow(0 22px 15px rgba(16,28,16,.32));transition:transform .6s var(--ease),filter .6s var(--ease)}
+.product-lg__img .bottle{position:absolute;inset:10px 0 50px;z-index:2;object-fit:cover;object-position:center top;filter:drop-shadow(0 22px 15px rgba(16,28,16,.32));transition:transform .6s var(--ease),filter .6s var(--ease)}
 .product-lg:hover .bottle{transform:scale(1.05)}
 .product-lg__desc{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
 .np{display:flex;flex-direction:column;gap:10px;color:var(--g100)}
@@ -229,7 +229,7 @@ ul{margin:0;padding:0;list-style:none}
 .product-sm:hover{transform:translateY(-6px)}
 .product-sm__img{position:relative;height:320px;background:var(--surface);overflow:hidden;display:flex;align-items:center;justify-content:center}
 .product-sm__img .blob{display:none}
-.product-sm__img .bottle{position:absolute;inset:14px 0 40px;z-index:2;object-fit:cover;object-position:center top;filter:drop-shadow(0 16px 12px rgba(16,28,16,.3));transition:transform .6s var(--ease),filter .6s var(--ease)}
+.product-sm__img .bottle{position:absolute;inset:6px 0 32px;z-index:2;object-fit:cover;object-position:center top;filter:drop-shadow(0 16px 12px rgba(16,28,16,.3));transition:transform .6s var(--ease),filter .6s var(--ease)}
 .product-sm:hover .bottle{transform:scale(1.07)}
 .product-sm__desc{border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px;padding:24px}
 .product-sm__desc h3{font-size:22px;font-weight:300;color:var(--g100)}
