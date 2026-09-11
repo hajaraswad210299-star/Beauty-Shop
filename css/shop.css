@@ -51,7 +51,8 @@
 .shop-count{margin:40px 0 16px;font-size:18px;color:var(--g60)}
 
 /* ---------- PRODUCT GRID ---------- */
-.shop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.shop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:transparent}
+.shop-grid .shop-card{border:1px solid var(--border);margin:-1px 0 0 -1px}
 .shop-card{background:var(--c0);display:flex;flex-direction:column;min-height:450px;position:relative;transition:background .4s var(--ease)}
 .shop-card:hover{background:#eef3ea}
 .shop-card__img{margin:24px 24px 0;background:var(--surface);flex:1 1 auto;min-height:0;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
