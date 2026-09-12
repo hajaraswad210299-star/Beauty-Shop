@@ -106,6 +106,7 @@ ul{margin:0;padding:0;list-style:none}
 .hero__leaf{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.05);animation:kenburns 18s ease-in-out infinite alternate}
 .hero__bg-right::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.28)}
 @keyframes kenburns{to{transform:scale(1.15)}}
+@keyframes logomarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 .hero__title{position:absolute;top:146px;left:calc(50% - 176px);width:806px;max-width:56vw;color:var(--c0);font-size:clamp(48px,7.5vw,108px);line-height:1.05;z-index:3}
 .hero__title .line{display:block;overflow:hidden}
@@ -196,10 +197,12 @@ ul{margin:0;padding:0;list-style:none}
 .about__body p{margin:0}
 .about__sep{height:1px;background:var(--border)}
 .about__seen{display:flex;flex-direction:column;gap:40px}
-.about__logos{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.about__logos{display:block}
+.about__logos-track{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.about__logos-track img.dupe{display:none}
 .about__logos img{height:56px;width:auto;opacity:.9;transition:opacity .3s,transform .3s var(--ease)}
-.about__logos img:nth-child(3){height:88px}
-.about__logos img:nth-child(5){height:80px}
+.about__logos-track img:nth-child(3){height:88px}
+.about__logos-track img:nth-child(5){height:80px}
 .about__logos img:hover{opacity:1;transform:translateY(-4px)}
 
 /* ============================================================
@@ -365,6 +368,12 @@ ul{margin:0;padding:0;list-style:none}
   .hero__bottle{position:absolute;right:-30px;bottom:100px;top:auto;left:auto;width:260px;height:440px;max-width:52vw;opacity:.95}
   .hero__slider{display:none}
   .hero__cta{position:relative;top:auto;left:auto;margin:40px 48px 60px;display:inline-flex}
+
+  /* As seen in — auto-scrolling marquee on mobile (no wrapping/stacking) */
+  .about__logos{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .about__logos-track{flex-wrap:nowrap;justify-content:flex-start;gap:0;width:max-content;animation:logomarquee 22s linear infinite}
+  .about__logos-track img,.about__logos-track img:nth-child(3),.about__logos-track img:nth-child(5){height:40px;margin-right:56px}
+  .about__logos-track img.dupe{display:block}
 
   .ingredients{grid-template-columns:1fr}
   .ingredients__left{min-height:auto;padding:64px 48px 320px}
