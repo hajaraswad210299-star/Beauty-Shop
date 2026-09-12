@@ -99,6 +99,7 @@
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:900px){
   .pd{grid-template-columns:1fr;gap:40px}
+  .pd__gallery,.pd__info{min-width:0}
   .pd__title{font-size:38px}
   .pd__gallery{position:static}
 }
