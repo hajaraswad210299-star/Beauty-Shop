@@ -72,6 +72,10 @@
     if (!field || field.classList.contains("has-selectui")) return;
     field.classList.add("has-selectui");
 
+    // Inline safety: hide native select but keep it focusable (for submit + validation),
+    // so the UI is never broken even if the stylesheet is missing/cached.
+    sel.style.cssText = "position:absolute;width:1px;height:1px;padding:0;margin:-1px;border:0;clip:rect(0 0 0 0);overflow:hidden;opacity:0;pointer-events:none";
+
     const opts = [...sel.options];
     const placeholder = opts.find((o) => o.disabled) || opts[0];
 
@@ -86,6 +90,11 @@
     const trigger = ui.querySelector(".select-ui__trigger");
     const valueEl = ui.querySelector(".select-ui__value");
     const menu = ui.querySelector(".select-ui__menu");
+    const caret = ui.querySelector(".select-ui__caret");
+    // Inline safety so it looks correct without the stylesheet
+    caret.setAttribute("width", "18"); caret.setAttribute("height", "18");
+    caret.style.cssText = "width:18px;height:18px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:2";
+    menu.style.display = "none";
 
     opts.forEach((o) => {
       if (o.disabled) return;
@@ -117,6 +126,8 @@
       items[activeIdx].scrollIntoView({ block: "nearest" });
     };
     const open = () => {
+      menu.style.display = "";
+      void menu.offsetWidth; // force reflow so the CSS transition runs (reliable even when tab isn't painting)
       ui.classList.add("is-open");
       trigger.setAttribute("aria-expanded", "true");
       const cur = items.findIndex((li) => li.dataset.value === sel.value);
@@ -126,6 +137,7 @@
       ui.classList.remove("is-open");
       trigger.setAttribute("aria-expanded", "false");
       items.forEach((li) => li.classList.remove("is-active"));
+      menu.style.display = "none";
     };
     const toggle = () => (ui.classList.contains("is-open") ? close() : open());
     const choose = (li) => {
