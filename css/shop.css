@@ -76,8 +76,9 @@
 .shop-card__price .old{color:var(--g40);text-decoration:line-through;font-weight:300}
 .shop-card__price .now{color:var(--g100);font-weight:700}
 .shop-card__rating{display:flex;align-items:center;gap:8px}
-.shop-card__rating .stars{display:flex;gap:4px}
-.shop-card__rating .stars img{width:20px;height:20px}
+.shop-card__rating{flex:0 0 auto}
+.shop-card__rating .stars{display:flex;gap:4px;flex:0 0 auto}
+.shop-card__rating .stars img{width:20px;height:20px;flex:0 0 auto}
 .shop-card__rating .rnum{font-size:22px;color:var(--g80);font-weight:300}
 
 /* ---------- PAGINATION ---------- */

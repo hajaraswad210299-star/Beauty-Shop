@@ -90,6 +90,9 @@
 .pdrel__track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,1fr);gap:0;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;scrollbar-width:none;border:1px solid var(--border);border-right:none}
 .pdrel__track::-webkit-scrollbar{display:none}
 .pdrel__track .shop-card{border-right:1px solid var(--border);scroll-snap-align:start;min-height:420px}
+.pdrel__track .shop-card__desc{flex-direction:column;align-items:flex-start;gap:10px}
+.pdrel__track .shop-card__rating .stars img{width:16px;height:16px}
+.pdrel__track .shop-card__rating .rnum{font-size:16px}
 .pdrel__more{align-self:center}
 
 /* ---------- RESPONSIVE ---------- */
