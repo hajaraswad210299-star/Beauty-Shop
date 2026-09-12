@@ -76,6 +76,7 @@
 .pd__tabnav button.is-active{color:var(--g100)}
 .pd__tabnav button.is-active::after{width:100%}
 .pd__tabbody{padding-top:24px;display:flex;flex-direction:column;gap:16px;font-size:16px;line-height:1.6;color:var(--g80)}
+.pd__tabbody[hidden]{display:none}
 .pd__tabbody p{margin:0}
 
 /* ---------- You might also like ---------- */
