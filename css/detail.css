@@ -106,3 +106,9 @@
   .pd__titlerow{flex-direction:column}
   .btn-cart,.btn-fav{height:56px}
 }
+/* mobile: product tabs scroll horizontally instead of wrapping to new lines */
+@media(max-width:640px){
+  .pd__tabnav{flex-wrap:nowrap;gap:24px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .pd__tabnav::-webkit-scrollbar{display:none}
+  .pd__tabnav button{flex:0 0 auto;white-space:nowrap}
+}
