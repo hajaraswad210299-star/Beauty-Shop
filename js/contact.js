@@ -25,10 +25,15 @@
     setStatus("", null);
 
     try {
+      const data = new FormData(form);
+      // Prettier email formatting via FormSubmit controls
+      data.set("_template", "box");
+      data.set("_subject", "✨ New message from VELVETY Contact Us");
+      data.set("_captcha", "false");
       const res = await fetch(ENDPOINT, {
         method: "POST",
         headers: { Accept: "application/json" },
-        body: new FormData(form),
+        body: data,
       });
       const json = await res.json().catch(() => ({}));
       if (res.ok && (json.success === true || json.success === "true")) {
